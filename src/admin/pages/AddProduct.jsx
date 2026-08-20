@@ -351,6 +351,15 @@ const AddProduct = () => {
                   placeholder="https://images.unsplash.com/... (Primary Image)" 
                   className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" 
                  />
+                 
+                 <div className="mt-3">
+                   <span className="text-xs text-gray-500 font-bold uppercase tracking-wider block mb-1">Or upload from device</span>
+                   <label className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-50 border border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors text-sm font-bold text-gray-600">
+                     <UploadCloud size={18} />
+                     <span>Choose Image File...</span>
+                     <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
+                   </label>
+                 </div>
                  {formData.image && (
                    <div className="mt-4">
                      <p className="text-xs font-bold text-gray-500 mb-2 uppercase">Main Preview</p>
