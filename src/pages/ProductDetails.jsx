@@ -195,7 +195,7 @@ const ProductDetails = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         
         {/* Left: Product Image Gallery */}
-        <div className="space-y-4 sticky top-24 h-fit">
+        <div className="space-y-4 lg:sticky top-24 h-fit">
           <div className="bg-white rounded-3xl p-8 border border-gray-100 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow h-[400px] md:h-[500px]">
             <img 
               src={activeImage} 
