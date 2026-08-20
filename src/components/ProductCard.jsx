@@ -49,11 +49,11 @@ const ProductCard = ({ product, dark = false }) => {
   return (
     <div className={`rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group ${dark ? 'bg-gray-800 border-gray-700 shadow-black/50' : 'bg-white border-gray-100'}`}>
       <div className="relative">
-        <Link to={`/products/${product.id}`} className="block relative h-64 overflow-hidden bg-gray-100">
+        <Link to={`/products/${product.id}`} className="block relative h-64 overflow-hidden bg-white p-6 border-b border-gray-50">
         <img 
           src={product.image_url || product.image} 
           alt={product.name} 
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
         />
         {/* Quick Add Button Overlay on Hover */}
         <div className="absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex justify-center bg-gradient-to-t from-black/80 to-transparent">
