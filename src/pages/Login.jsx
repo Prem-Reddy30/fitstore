@@ -26,12 +26,8 @@ const Login = () => {
     setError('');
     
     try {
-      const result = await login(formData.email, formData.password);
-      if (result.role === 'admin') {
-        navigate('/admin');
-      } else {
-        navigate('/');
-      }
+      await login(formData.email, formData.password);
+      navigate('/');
     } catch (err) {
       setError(err.message.replace('Firebase: ', ''));
       setLoading(false);
@@ -42,12 +38,8 @@ const Login = () => {
     try {
       setLoading(true);
       setError('');
-      const result = await loginWithGoogle();
-      if (result.role === 'admin') {
-        navigate('/admin');
-      } else {
-        navigate('/');
-      }
+      await loginWithGoogle();
+      navigate('/');
     } catch (err) {
       setError(err.message.replace('Firebase: ', ''));
       setLoading(false);
